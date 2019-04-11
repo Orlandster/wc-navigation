@@ -12,6 +12,13 @@ import '@stencil/core';
 
 export namespace Components {
 
+  interface WcMenu {
+    'type': string;
+  }
+  interface WcMenuAttributes extends StencilHTMLAttributes {
+    'type'?: string;
+  }
+
   interface WcNavItem {
     'href': string;
     'target': string;
@@ -27,15 +34,23 @@ export namespace Components {
 
 declare global {
   interface StencilElementInterfaces {
+    'WcMenu': Components.WcMenu;
     'WcNavItem': Components.WcNavItem;
     'WcNavbar': Components.WcNavbar;
   }
 
   interface StencilIntrinsicElements {
+    'wc-menu': Components.WcMenuAttributes;
     'wc-nav-item': Components.WcNavItemAttributes;
     'wc-navbar': Components.WcNavbarAttributes;
   }
 
+
+  interface HTMLWcMenuElement extends Components.WcMenu, HTMLStencilElement {}
+  var HTMLWcMenuElement: {
+    prototype: HTMLWcMenuElement;
+    new (): HTMLWcMenuElement;
+  };
 
   interface HTMLWcNavItemElement extends Components.WcNavItem, HTMLStencilElement {}
   var HTMLWcNavItemElement: {
@@ -50,11 +65,13 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
+    'wc-menu': HTMLWcMenuElement
     'wc-nav-item': HTMLWcNavItemElement
     'wc-navbar': HTMLWcNavbarElement
   }
 
   interface ElementTagNameMap {
+    'wc-menu': HTMLWcMenuElement;
     'wc-nav-item': HTMLWcNavItemElement;
     'wc-navbar': HTMLWcNavbarElement;
   }
