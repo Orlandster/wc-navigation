@@ -4,12 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
   <title>WebComponent Navbar Demo</title>
-  <script src="/build/mycomponent.js"></script>
+  <script src="/build/wc-navigation.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+    }
+  </style>
 
 </head>
 <body>
 
-  <wc-navbar></wc-navbar>
+  <wc-navbar>
+    <div slot="item-start">left</div>
+    <div slot="item-center">center</div>
+    <div slot="item-end">end</div>
+  </wc-navbar>
 
 </body>
 </html>

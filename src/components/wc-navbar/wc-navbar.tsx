@@ -7,6 +7,12 @@ import { Component } from '@stencil/core';
 })
 export class WcNavbar {
   render() {
-    return <div>asdfdaf</div>;
+    return (
+      <div class="navbar">
+        <slot name="item-start" />
+        <slot name="item-center" />
+        <slot name="item-end" />
+      </div>
+    )
   }
 }
