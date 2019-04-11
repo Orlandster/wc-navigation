@@ -1,8 +1,8 @@
 import { Component, Prop } from '@stencil/core';
 
 @Component({
-  tag: 'wc-nav-item',
-  styleUrl: 'wc-nav-item.scss',
+  tag: 'wc-menu-item',
+  styleUrl: 'wc-menu-item.scss',
   shadow: true
 })
 export class WcNavbar {
@@ -11,7 +11,7 @@ export class WcNavbar {
 
   render() {
     return (
-      <li class="nav-item">
+      <li class="menu-item">
         <a 
           href={this.href} 
           target={this.target}

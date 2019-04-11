@@ -12,20 +12,20 @@ import '@stencil/core';
 
 export namespace Components {
 
+  interface WcMenuItem {
+    'href': string;
+    'target': string;
+  }
+  interface WcMenuItemAttributes extends StencilHTMLAttributes {
+    'href'?: string;
+    'target'?: string;
+  }
+
   interface WcMenu {
     'type': string;
   }
   interface WcMenuAttributes extends StencilHTMLAttributes {
     'type'?: string;
-  }
-
-  interface WcNavItem {
-    'href': string;
-    'target': string;
-  }
-  interface WcNavItemAttributes extends StencilHTMLAttributes {
-    'href'?: string;
-    'target'?: string;
   }
 
   interface WcNavbar {}
@@ -34,28 +34,28 @@ export namespace Components {
 
 declare global {
   interface StencilElementInterfaces {
+    'WcMenuItem': Components.WcMenuItem;
     'WcMenu': Components.WcMenu;
-    'WcNavItem': Components.WcNavItem;
     'WcNavbar': Components.WcNavbar;
   }
 
   interface StencilIntrinsicElements {
+    'wc-menu-item': Components.WcMenuItemAttributes;
     'wc-menu': Components.WcMenuAttributes;
-    'wc-nav-item': Components.WcNavItemAttributes;
     'wc-navbar': Components.WcNavbarAttributes;
   }
 
+
+  interface HTMLWcMenuItemElement extends Components.WcMenuItem, HTMLStencilElement {}
+  var HTMLWcMenuItemElement: {
+    prototype: HTMLWcMenuItemElement;
+    new (): HTMLWcMenuItemElement;
+  };
 
   interface HTMLWcMenuElement extends Components.WcMenu, HTMLStencilElement {}
   var HTMLWcMenuElement: {
     prototype: HTMLWcMenuElement;
     new (): HTMLWcMenuElement;
-  };
-
-  interface HTMLWcNavItemElement extends Components.WcNavItem, HTMLStencilElement {}
-  var HTMLWcNavItemElement: {
-    prototype: HTMLWcNavItemElement;
-    new (): HTMLWcNavItemElement;
   };
 
   interface HTMLWcNavbarElement extends Components.WcNavbar, HTMLStencilElement {}
@@ -65,14 +65,14 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
+    'wc-menu-item': HTMLWcMenuItemElement
     'wc-menu': HTMLWcMenuElement
-    'wc-nav-item': HTMLWcNavItemElement
     'wc-navbar': HTMLWcNavbarElement
   }
 
   interface ElementTagNameMap {
+    'wc-menu-item': HTMLWcMenuItemElement;
     'wc-menu': HTMLWcMenuElement;
-    'wc-nav-item': HTMLWcNavItemElement;
     'wc-navbar': HTMLWcNavbarElement;
   }
 
