@@ -13,6 +13,7 @@ export class WcNavbar {
     return (
       <li class="menu-item">
         <a 
+          class="menu-item__link"
           href={this.href} 
           target={this.target}
         >

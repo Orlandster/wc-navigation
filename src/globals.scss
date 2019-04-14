@@ -1,21 +1,26 @@
 :root {
     --navbar-height: 75px;
+    --navbar-padding: 20px;
     --navbar-bg: #1867c0;
+    --dropdown-top: 46px;
+    --dropdown-bg: #1867c0;
+    --dropdown-padding: 20px;
 }
 
 wc-navbar {
-    height: var(--navbar-height);
+    display: flex;
+    align-items: center;
 }
 
 wc-menu[type=dropdown] {
     position: absolute;
+    top: var(--dropdown-top);
     left: 0;
     display: none;
 }
 
 wc-menu-item {
     position: relative;
-    padding: 20px;
 
     &:hover {
         & > [type=dropdown] {

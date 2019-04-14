@@ -1,4 +1,11 @@
 .wc-menu {
+    margin: 0;
+
+    &.dropdown {
+        padding: var(--dropdown-padding);
+        background: var(--dropdown-bg);
+    }
+
     &.horizontal {
         display: flex;
     }

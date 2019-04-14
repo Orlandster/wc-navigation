@@ -1,3 +1,8 @@
-wc-menu-item:hover > wc-menu {
-    display: block !important;
+.menu-item {
+    margin: 0;
+    list-style: none;
+
+    &__link {
+        padding: 15px;
+    }
 }
