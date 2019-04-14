@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
   <title>WebComponent Navbar Demo</title>
+  <link rel="stylesheet" type="text/css" href="/build/wc-navigation.css">
   <script src="/build/wc-navigation.js"></script>
 
   <style>
@@ -20,9 +21,19 @@
       <wc-menu>
         <wc-menu-item href="https://google.ch">
           Test
+          <wc-menu type="dropdown">
+            <wc-menu-item href="https://google.ch">Sub Menu Item</wc-menu-item>
+            <wc-menu-item href="https://google.ch">Sub Menu Item</wc-menu-item>
+            <wc-menu-item href="https://google.ch">Sub Menu Item</wc-menu-item>
+          </wc-menu>
         </wc-menu-item>
         <wc-menu-item href="https://google.ch">
-          Test
+          Test 2
+          <wc-menu type="dropdown">
+            <wc-menu-item href="https://google.ch">Sub Menu Item</wc-menu-item>
+            <wc-menu-item href="https://google.ch">Sub Menu Item</wc-menu-item>
+            <wc-menu-item href="https://google.ch">Sub Menu Item</wc-menu-item>
+          </wc-menu>
         </wc-menu-item>
       </wc-menu>
     </div>

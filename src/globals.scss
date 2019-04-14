@@ -1,0 +1,25 @@
+:root {
+    --navbar-height: 75px;
+    --navbar-bg: #1867c0;
+}
+
+wc-navbar {
+    height: var(--navbar-height);
+}
+
+wc-menu[type=dropdown] {
+    position: absolute;
+    left: 0;
+    display: none;
+}
+
+wc-menu-item {
+    position: relative;
+    padding: 20px;
+
+    &:hover {
+        & > [type=dropdown] {
+            display: block;
+        }   
+    }
+}
